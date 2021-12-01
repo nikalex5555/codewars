@@ -16,7 +16,8 @@ console.log(circleArea(NaN));
 function iceBrickVolume(radius, bottleLength, rimLength) {
   // Your code should be here ;)
   let x=bottleLength-rimLength;
-  let cylinder=Math.PI*radius*radius*x;
+  let cylinder=radius*radius*x;
+
   return cylinder;
 
 }
