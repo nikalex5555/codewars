@@ -11,3 +11,12 @@ console.log(circleArea(0)); //returns false
 console.log(circleArea(43.26,73)); //returns 5881.25
 console.log(circleArea(68)); //returns 14526.72
 console.log(circleArea(NaN));
+
+
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  // Your code should be here ;)
+  let x=bottleLength-rimLength;
+  let cylinder=Math.PI*radius*radius*x;
+  return cylinder;
+
+}
