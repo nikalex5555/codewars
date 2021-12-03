@@ -95,73 +95,89 @@ const howManyDalmatians = (number) =>
 // console.log(findLongest("Wind your body and wiggle your belly")); //, 6);
 // console.log(findLongest("Lets all go on holiday")); //, 7);
 
-function part(x) {
-  const pit = [
-    "Partridge",
-    "PearTree",
-    "Chat",
-    "Dan",
-    "Toblerone",
-    "Lynn",
-    "AlphaPapa",
-    "Nomad",
-  ];
-   x.map(function(el,index){
-    if(pit.some(el)){
-      return 100;
-    }
-    return 10;
-  });
-  console.log(x)
-}
-console.log(part(["Grouse", "Partridge", "Pheasant"])); //, 'Mine\'s a Pint!');
-console.log(part(["Pheasant", "Goose", "Starling", "Robin"])); //, 'Lynn, I\'ve pierced my foot on a spike!!');
-console.log(
-  part([
-    "Grouse",
-    "Partridge",
-    "Pheasant",
-    "Goose",
-    "Starling",
-    "Robin",
-    "Thrush",
-    "Emu",
-    "PearTree",
-    "Chat",
-    "Dan",
-    "Square",
-    "Toblerone",
-    "Lynn",
-    "AlphaPapa",
-    "BMW",
-    "Graham",
-    "Tool",
-    "Nomad",
-    "Finger",
-    "Hamster",
-  ])
-); //, 'Mine\'s a Pint!!!!!!!!');
-
+// function part(x) {
+//   const pit = [
+//     "Partridge",
+//     "PearTree",
+//     "Chat",
+//     "Dan",
+//     "Toblerone",
+//     "Lynn",
+//     "AlphaPapa",
+//     "Nomad",
+//   ];
+//    x.map(function(el,index){
+//     if(pit.some(el)){
+//       return 100;
+//     }
+//     return 10;
+//   });
+//   console.log(x)
+// }
+// console.log(part(["Grouse", "Partridge", "Pheasant"])); //, 'Mine\'s a Pint!');
+// console.log(part(["Pheasant", "Goose", "Starling", "Robin"])); //, 'Lynn, I\'ve pierced my foot on a spike!!');
+// console.log(
+//   part([
+//     "Grouse",
+//     "Partridge",
+//     "Pheasant",
+//     "Goose",
+//     "Starling",
+//     "Robin",
+//     "Thrush",
+//     "Emu",
+//     "PearTree",
+//     "Chat",
+//     "Dan",
+//     "Square",
+//     "Toblerone",
+//     "Lynn",
+//     "AlphaPapa",
+//     "BMW",
+//     "Graham",
+//     "Tool",
+//     "Nomad",
+//     "Finger",
+//     "Hamster",
+//   ])
+// ); //, 'Mine\'s a Pint!!!!!!!!');
 
 function iceBrickVolume(radius, bottleLength, rimLength) {
   // Your code should be here ;)
-  let x=bottleLength-rimLength;
-  let cylinder=2*radius*radius*x;
+  let x = bottleLength - rimLength;
+  let cylinder = 2 * radius * radius * x;
   return cylinder;
-
 }
 
-
-function boolToWord( bool ){
+function boolToWord(bool) {
   //...
-  if(bool===true){ return 'Yes'} 
-  else {return 'No'}
+  if (bool === true) {
+    return "Yes";
+  } else {
+    return "No";
+  }
 }
 
-function booleanToString(b){
-  return b===true?'true':'false';
+function booleanToString(b) {
+  return b === true ? "true" : "false";
 }
 
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
   return +str;
+};
+
+function htmlspecialchars(formData) {
+  // Insert your code here
+  // if(formData===''){return &lt}
+  // else if(formData===''){return }
+  // else if(formData==='"'){return }
+  // else if(formData===''){return &amp}
+
+  return formData
+  .replace(/'&'/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
 }
+console.log(htmlspecialchars("<h2>Hello World</h2>")); //,
+("&lt;h2&gt;Hello World&lt;/h2&gt;");
