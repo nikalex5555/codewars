@@ -160,5 +160,8 @@ function boolToWord( bool ){
 
 function booleanToString(b){
   return b===true?'true':'false';
-  //your code here
+}
+
+var stringToNumber = function(str){
+  return +str;
 }
