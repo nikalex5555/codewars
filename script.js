@@ -157,3 +157,8 @@ function boolToWord( bool ){
   if(bool===true){ return 'Yes'} 
   else {return 'No'}
 }
+
+function booleanToString(b){
+  return b===true?'true':'false';
+  //your code here
+}
