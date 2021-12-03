@@ -82,15 +82,71 @@ const howManyDalmatians = (number) =>
 // console.log(howManyDalmatians(100)); //, "Woah that's a lot of dogs!");
 // console.log(howManyDalmatians(101)); //, "101 DALMATIANS!!!");
 
-function findLongest(str) {
-  let spl = str.split(" ");
-  let res = spl.sort(function (a, b) {
-    return b.length - a.length;
+// function findLongest(str) {
+//   let spl = str.split(" ");
+//   let res = spl.sort(function (a, b) {
+//     return b.length - a.length;
+//   });
+//   return res[0].length;
+// }
+// console.log(findLongest("The quick white fox jumped around the massive dog")); //, 7);
+// console.log(findLongest("Take me to tinseltown with you")); //, 10);
+// console.log(findLongest("Sausage chops")); //, 7);
+// console.log(findLongest("Wind your body and wiggle your belly")); //, 6);
+// console.log(findLongest("Lets all go on holiday")); //, 7);
+
+function part(x) {
+  const pit = [
+    "Partridge",
+    "PearTree",
+    "Chat",
+    "Dan",
+    "Toblerone",
+    "Lynn",
+    "AlphaPapa",
+    "Nomad",
+  ];
+   x.map(function(el,index){
+    if(pit.some(el)){
+      return 100;
+    }
+    return 10;
   });
-  return res[0].length;
+  console.log(x)
 }
-console.log(findLongest("The quick white fox jumped around the massive dog")); //, 7);
-console.log(findLongest("Take me to tinseltown with you")); //, 10);
-console.log(findLongest("Sausage chops")); //, 7);
-console.log(findLongest("Wind your body and wiggle your belly")); //, 6);
-console.log(findLongest("Lets all go on holiday")); //, 7);
+console.log(part(["Grouse", "Partridge", "Pheasant"])); //, 'Mine\'s a Pint!');
+console.log(part(["Pheasant", "Goose", "Starling", "Robin"])); //, 'Lynn, I\'ve pierced my foot on a spike!!');
+console.log(
+  part([
+    "Grouse",
+    "Partridge",
+    "Pheasant",
+    "Goose",
+    "Starling",
+    "Robin",
+    "Thrush",
+    "Emu",
+    "PearTree",
+    "Chat",
+    "Dan",
+    "Square",
+    "Toblerone",
+    "Lynn",
+    "AlphaPapa",
+    "BMW",
+    "Graham",
+    "Tool",
+    "Nomad",
+    "Finger",
+    "Hamster",
+  ])
+); //, 'Mine\'s a Pint!!!!!!!!');
+
+
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  // Your code should be here ;)
+  let x=bottleLength-rimLength;
+  let cylinder=2*radius*radius*x;
+  return cylinder;
+
+}
