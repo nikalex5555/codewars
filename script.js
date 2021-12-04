@@ -253,3 +253,18 @@ function countSheeps(arrayOfSheep) {
   return res;
 }
 console.log(countSheeps(array1));
+
+
+//If you can't sleep, just count sheep!!
+
+var countSheep = function (num){
+  //your code here
+  let res=[];
+  for (let i=1; i<=num; i++){
+   res.push(i+' sheep...') 
+  }
+  return res.join('')
+}
+console.log(countSheep(1))//, "1 sheep...");
+console.log(countSheep(2))//, "1 sheep...2 sheep...");
+console.log(countSheep(3))//, "1 sheep...2 sheep...3 sheep...");
