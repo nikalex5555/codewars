@@ -187,3 +187,7 @@ function even_or_odd(number) {
   return number%2==0?"Even":"Odd";
  }
 
+ var a = "dev";
+ var b = "Lab";
+ var name = a + b;
+ 
