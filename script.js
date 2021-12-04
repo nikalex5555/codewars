@@ -282,3 +282,50 @@ console.log(abbrevName("Patrick Feenan")); //, "P.F");
 console.log(abbrevName("Evan Cole")); //, "E.C");
 console.log(abbrevName("P Favuzzi")); //, "P.F");
 console.log(abbrevName("David Mendieta")); //, "D.M");
+
+//Convert a string to an array
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+//Find the Remainder
+function remainder(a, b) {
+ 
+  if (a > b) {
+    return a % b;
+  }
+ else if(a < b){
+  return b % a;
+}
+else if (a>b&&b==0) {
+  return NaN;
+}
+else if (a<b&&b==0) {
+  return b%a;
+}
+else if (a==0&&b==0) {
+  return NaN;
+} 
+else if (a<0&&b<0&&a>b) {
+  return b%a;
+}
+  else if (a<0&&b<0&&a<b) {
+  return a%b;
+}
+}
+console.log(remainder(17, 5)); //, 2, 'Returned value should be the value left over after dividing as much as possible.');
+console.log(remainder(13, 72)); //, remainder(72, 13), 'The order the arguments are passed should not matter.');
+console.log(remainder(1, 0)); //, 'Divide by zero should return NaN');
+console.log(remainder(0, 0)); //, 'Divide by zero should return NaN');
+console.log(remainder(-2, -3)); //, 'Divide by zero should return NaN');
+
+//DNA to RNA Conversion
+
+
+function DNAtoRNA(dna) {
+  // create a function which returns an RNA sequence from the given DNA sequence
+ return dna.replace(/T/g, "U").replace(/'U'/g, "T");
+}
+    console.log(DNAtoRNA("TTTT"))//, "UUUU")
+    console.log(DNAtoRNA("GCAT"))//, "GCAU")
+    console.log(DNAtoRNA("GACCGCCGCC"))//, "GACCGCCGCC")
