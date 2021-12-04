@@ -254,17 +254,31 @@ function countSheeps(arrayOfSheep) {
 }
 console.log(countSheeps(array1));
 
-
 //If you can't sleep, just count sheep!!
 
-var countSheep = function (num){
+var countSheep = function (num) {
   //your code here
-  let res=[];
-  for (let i=1; i<=num; i++){
-   res.push(i+' sheep...') 
+  let res = [];
+  for (let i = 1; i <= num; i++) {
+    res.push(i + " sheep...");
   }
-  return res.join('')
+  return res.join("");
+};
+console.log(countSheep(1)); //, "1 sheep...");
+console.log(countSheep(2)); //, "1 sheep...2 sheep...");
+console.log(countSheep(3)); //, "1 sheep...2 sheep...3 sheep...");
+
+//Abbreviate a Two Word Name
+function abbrevName(name) {
+  let newSort = name.split(" ");
+  let arr = [];
+  newSort.forEach((el) => {
+    arr.push(el[0]);
+  });
+  return arr.join(".").toUpperCase();
 }
-console.log(countSheep(1))//, "1 sheep...");
-console.log(countSheep(2))//, "1 sheep...2 sheep...");
-console.log(countSheep(3))//, "1 sheep...2 sheep...3 sheep...");
+console.log(abbrevName("Sam Harris")); //, "S.H");
+console.log(abbrevName("Patrick Feenan")); //, "P.F");
+console.log(abbrevName("Evan Cole")); //, "E.C");
+console.log(abbrevName("P Favuzzi")); //, "P.F");
+console.log(abbrevName("David Mendieta")); //, "D.M");
