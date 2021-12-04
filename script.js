@@ -191,3 +191,8 @@ function even_or_odd(number) {
  var b = "Lab";
  var name = a + b;
  
+
+ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  // code goes here
+  return laLigaGoals+copaDelReyGoals+championsLeagueGoals
+}
