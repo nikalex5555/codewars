@@ -325,7 +325,15 @@ console.log(remainder(-2, -3)); //, 'Divide by zero should return NaN');
 function DNAtoRNA(dna) {
   // create a function which returns an RNA sequence from the given DNA sequence
  return dna.replace(/T/g, "U").replace(/'U'/g, "T");
+
 }
     console.log(DNAtoRNA("TTTT"))//, "UUUU")
     console.log(DNAtoRNA("GCAT"))//, "GCAU")
     console.log(DNAtoRNA("GACCGCCGCC"))//, "GACCGCCGCC")
+
+
+    //Reversed Strings
+    function solution(str){
+
+      return str.split('').reverse().join('')
+     }
