@@ -174,55 +174,82 @@ function htmlspecialchars(formData) {
   // else if(formData===''){return &amp}
 
   return formData
-  .replace(/'&'/g, "&amp;")
+    .replace(/'&'/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
+    .replace(/"/g, "&quot;");
 }
 console.log(htmlspecialchars("<h2>Hello World</h2>")); //,
 ("&lt;h2&gt;Hello World&lt;/h2&gt;");
 
-
 function even_or_odd(number) {
-  return number%2==0?"Even":"Odd";
- }
-
- var a = "dev";
- var b = "Lab";
- var name = a + b;
- 
-
- function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
-  // code goes here
-  return laLigaGoals+copaDelReyGoals+championsLeagueGoals
+  return number % 2 == 0 ? "Even" : "Odd";
 }
-function move (position, roll) {
+
+var a = "dev";
+var b = "Lab";
+var name = a + b;
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  // code goes here
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+function move(position, roll) {
   // return the new position
-  return 2*roll+position
+  return 2 * roll + position;
 }
 function combat(health, damage) {
-  return  health-damage>0?health-damage:0
-  }
+  return health - damage > 0 ? health - damage : 0;
+}
 
-  function correct(string)
-{
-	// your code here
-  return string
-  .replace(/5/g, "S")
-    .replace(/0/g, "O")
-    .replace(/1/g, "I")
+function correct(string) {
+  // your code here
+  return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I");
 }
 function peopleWithAgeDrink(old) {
-  if (old<14){
-    return "drink toddy"
+  if (old < 14) {
+    return "drink toddy";
+  } else if (old < 18) {
+    return "drink coke";
+  } else if (old < 21) {
+    return "drink beer";
+  } else if (old >= 21) {
+    return "drink whisky";
   }
-    else if (old<18){
-    return "drink coke"
-  }
-    else if (old<21){
-    return "drink beer"
-  }
-    else if (old>=21){
-    return "drink whisky"
-  }
-  };
+}
+
+//Counting sheep...
+var array1 = [
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+];
+function countSheeps(arrayOfSheep) {
+  let res = 0;
+  arrayOfSheep.forEach((el) => {
+    if (el == true) res++;
+  });
+  return res;
+}
+console.log(countSheeps(array1));
