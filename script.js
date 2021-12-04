@@ -200,3 +200,6 @@ function move (position, roll) {
   // return the new position
   return 2*roll+position
 }
+function combat(health, damage) {
+  return  health-damage>0?health-damage:0
+  }
