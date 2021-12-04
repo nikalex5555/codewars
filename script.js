@@ -290,28 +290,21 @@ function stringToArray(string) {
 
 //Find the Remainder
 function remainder(a, b) {
- 
   if (a > b) {
     return a % b;
+  } else if (a < b) {
+    return b % a;
+  } else if (a > b && b == 0) {
+    return NaN;
+  } else if (a < b && b == 0) {
+    return b % a;
+  } else if (a == 0 && b == 0) {
+    return NaN;
+  } else if (a < 0 && b < 0 && a > b) {
+    return b % a;
+  } else if (a < 0 && b < 0 && a < b) {
+    return a % b;
   }
- else if(a < b){
-  return b % a;
-}
-else if (a>b&&b==0) {
-  return NaN;
-}
-else if (a<b&&b==0) {
-  return b%a;
-}
-else if (a==0&&b==0) {
-  return NaN;
-} 
-else if (a<0&&b<0&&a>b) {
-  return b%a;
-}
-  else if (a<0&&b<0&&a<b) {
-  return a%b;
-}
 }
 console.log(remainder(17, 5)); //, 2, 'Returned value should be the value left over after dividing as much as possible.');
 console.log(remainder(13, 72)); //, remainder(72, 13), 'The order the arguments are passed should not matter.');
@@ -321,25 +314,46 @@ console.log(remainder(-2, -3)); //, 'Divide by zero should return NaN');
 
 //DNA to RNA Conversion
 
-
 function DNAtoRNA(dna) {
   // create a function which returns an RNA sequence from the given DNA sequence
- return dna.replace(/T/g, "U").replace(/'U'/g, "T");
-
+  return dna.replace(/T/g, "U").replace(/'U'/g, "T");
 }
-    console.log(DNAtoRNA("TTTT"))//, "UUUU")
-    console.log(DNAtoRNA("GCAT"))//, "GCAU")
-    console.log(DNAtoRNA("GACCGCCGCC"))//, "GACCGCCGCC")
+console.log(DNAtoRNA("TTTT")); //, "UUUU")
+console.log(DNAtoRNA("GCAT")); //, "GCAU")
+console.log(DNAtoRNA("GACCGCCGCC")); //, "GACCGCCGCC")
 
+//Reversed Strings
+function solution(str) {
+  return str.split("").reverse().join("");
+}
 
-    //Reversed Strings
-    function solution(str){
+//What's the real floor?
+function getRealFloor(n) {
+  return n < 0
+    ? n
+    : n == 1 || n == 0
+    ? 0
+    : n <= 13
+    ? n - 1
+    : n > 13
+    ? n - 2
+    : 0;
+}
 
-      return str.split('').reverse().join('')
-     }
+//Training JS #32: methods of Math---round() ceil() and floor()
 
-
-     //What's the real floor?
-     function getRealFloor(n) {
-      return n<0?n:n==1||n==0?0:n<=13?n-1:n>13?n-2:0
-   }
+function roundIt(n) {
+  let str = n.toString().split(".");
+  if (str[0].length < str[1].length) {
+    return Number(Math.ceil(n))
+  }
+  if (str[0].length > str[1].length) {
+    return Number(Math.floor(n)) 
+  }
+  if ((str[0].length === str[1].length)) {
+    return Number(Math.round(n))
+  }
+}
+console.log(roundIt("3.45")); // , 4);
+console.log(roundIt(34.5)); // , 34);
+console.log(roundIt(34.56)); // , 35);
