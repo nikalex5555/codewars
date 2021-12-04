@@ -181,3 +181,9 @@ function htmlspecialchars(formData) {
 }
 console.log(htmlspecialchars("<h2>Hello World</h2>")); //,
 ("&lt;h2&gt;Hello World&lt;/h2&gt;");
+
+
+function even_or_odd(number) {
+  return number%2==0?"Even":"Odd";
+ }
+
