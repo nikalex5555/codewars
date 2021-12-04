@@ -196,3 +196,7 @@ function even_or_odd(number) {
   // code goes here
   return laLigaGoals+copaDelReyGoals+championsLeagueGoals
 }
+function move (position, roll) {
+  // return the new position
+  return 2*roll+position
+}
