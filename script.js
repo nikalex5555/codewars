@@ -720,3 +720,9 @@ return l==w?l*w:2*(l+w)
   function multiply(a,b){
     return a*b
   }
+
+//Grasshopper - Basic Function Fixer
+  function addFive(num) {
+    var total = num + 5
+    return total
+  }
