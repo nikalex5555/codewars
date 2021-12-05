@@ -620,3 +620,11 @@ function getSum(a, b) {
 }
 console.log(getSum(0, -1)); //,-1);
 console.log(getSum(221, -313)); //,1);
+
+
+//Volume of a Cuboid
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+return length* width* height
+  }
+}
