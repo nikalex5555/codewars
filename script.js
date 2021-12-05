@@ -560,3 +560,30 @@ function evenNumbers(array, number) {
   function getNames(data){
     return data.map(function(item){return item.name});
   }
+
+//JavaScript Array Filter
+  function getEvenNumbers(numbersArray){
+   return numbersArray.filter(el=>{return el%2==0})
+  }
+      console.log(getEvenNumbers([1,2,3,6,8,10]))//, [2,6,8,10])
+      console.log(getEvenNumbers([1,2]))//, [2]))
+      console.log(getEvenNumbers([12,14,15]))//, [12,14])
+      console.log(getEvenNumbers([13,15]))//, [])
+      console.log(getEvenNumbers([1,3,9]))//, [])
+
+
+      //Reversed Words
+      function reverseWords(str){
+       let arr= str.split(' ')
+        let ret=[];
+        for(let i=0; i<arr.length; i++){
+          ret.unshift(arr[i])
+        }
+        return ret.join(' ')
+
+      }
+     console.log(reverseWords("hello world!"))//, "world! hello")
+     console.log(reverseWords("yoda doesn't speak like this" ))//,  "this like speak doesn't yoda")
+     console.log(reverseWords("foobar"                       ))//,  "foobar")
+     console.log(reverseWords("kata editor"                  ))//,  "editor kata")
+     console.log(reverseWords("row row row your boat"        ))//,  "boat your row row row")
