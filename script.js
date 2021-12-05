@@ -740,3 +740,14 @@ return l==w?l*w:2*(l+w)
 
 
   let greet=()=>  'hello world!'
+
+
+  //Grasshopper - Summation
+  var summation = function (num) {
+    let arr=[];
+    for (let i=0; i<=num; i++){
+      arr.push(i)
+    }
+   return arr.reduce((sum,el)=> sum+el,0)
+  }
+  console.log(summation(8))//, 36)
