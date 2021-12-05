@@ -780,8 +780,8 @@ function sumStr(a, b) {
 console.log(sumStr("4", "5")); //, "9"))
 
 function array(arr) {
-  if(arr.length<3){
-    return null
+  if (arr.length < 3) {
+    return null;
   }
   //let newArr=[];
   let newArr = arr.split(",");
@@ -793,17 +793,26 @@ console.log(array("1,2,3")); //, '2');
 console.log(array("1,2,3,4")); //, '2 3');
 console.log(array("1,2,3,4,5")); //, '2 3 4');
 
-
-
 //Returning Strings
-function greet(name){
+/* function greet(name){
   return "Hello, "+name+" how are you doing today?"
-  }
+  } */
 
 //Is it even?
-  function testEven(n) {
-    if(n%2==0){
-      return true
-    }
-      return false
-    }
+function testEven(n) {
+  if (n % 2 == 0) {
+    return true;
+  }
+  return false;
+}
+
+
+//Reversed sequence
+const reverseSeq = (n) => {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  return arr.reverse();
+};
+console.log(reverseSeq(5));
