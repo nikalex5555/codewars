@@ -686,3 +686,9 @@ function getAge(inputString){
   
   }
   console.log(getAge("4 years old"))//, 4);
+
+//Transportation on vacation
+  function rentalCarCost(d) {
+   return d>=3?d*40-20:d>=7?d*40-50:d*40
+
+  }
