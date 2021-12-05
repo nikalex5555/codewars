@@ -651,7 +651,6 @@ console.log(twiceAsOld(55, 30)); // , 5);
 
 //Get Nth Even Number
 function nthEven(n) {
-
   if (n == 0 || n == 1) {
     return 0;
   }
@@ -665,89 +664,92 @@ console.log(nthEven(1298734)); //, 2597466, "Wrong Value!");
 
 //Third Angle of a Triangle
 function otherAngle(a, b) {
-  return 180-a-b;
+  return 180 - a - b;
 }
 //Century From Year
 function century(n) {
-return Math.ceil(n/100) 
+  return Math.ceil(n / 100);
 }
-console.log(century(1705))
-
+console.log(century(1705));
 
 //Convert a Number to a String!
 function numberToString(num) {
-  return num+''
+  return num + "";
 }
 
 //Parse nice int from char problem
-function getAge(inputString){
-  let res= inputString.split('')[0];
-  return +res
-  
-  }
-  console.log(getAge("4 years old"))//, 4);
+function getAge(inputString) {
+  let res = inputString.split("")[0];
+  return +res;
+}
+console.log(getAge("4 years old")); //, 4);
 
 //Transportation on vacation
-  function rentalCarCost(d) {
-   return d>=3?d*40-20:d>=7?d*40-50:d*40
-
-  }
-
+function rentalCarCost(d) {
+  return d >= 3 ? d * 40 - 20 : d >= 7 ? d * 40 - 50 : d * 40;
+}
 
 //Simple multiplication
 
-  function simpleMultiplication(number) {
-if(number%2==0){
-  return number*8
-}
-return number*9
+function simpleMultiplication(number) {
+  if (number % 2 == 0) {
+    return number * 8;
   }
+  return number * 9;
+}
 
 //Area or Perimeter
-  const areaOrPerimeter = function(l , w) {
-return l==w?l*w:2*(l+w)
-  };
-
+const areaOrPerimeter = function (l, w) {
+  return l == w ? l * w : 2 * (l + w);
+};
 
 //You Can't Code Under Pressure #1
-  function doubleInteger(i) {
-    // i will be an integer. Double it and return it.
-    return i*2;
-  }
+function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  return i * 2;
+}
 
-
-  //Function 3 - multiplying two numbers
-  function multiply(a,b){
-    return a*b
-  }
+//Function 3 - multiplying two numbers
+function multiply(a, b) {
+  return a * b;
+}
 
 //Grasshopper - Basic Function Fixer
-  function addFive(num) {
-    var total = num + 5
-    return total
-  }
+function addFive(num) {
+  var total = num + 5;
+  return total;
+}
 //Keep Hydrated!
-  function litres(time) {
-    return Math.floor(time*0.5);
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
+console.log(litres(2)); //, 1, 'should return 1 litre');
+console.log(litres(1.4)); //, 0, 'should return 0 litres');
+console.log(litres(12.3)); //, 6, 'should return 6 litres');
+console.log(litres(0.82)); //, 0, 'should return 0 litres');
+console.log(litres(11.8)); //, 5, 'should return 5 litres');
+console.log(litres(1787)); //, 893, 'should return 893 litres');
+console.log(litres(0)); //, 0, 'should return 0 litres');
+
+let greet = () => "hello world!";
+
+//Grasshopper - Summation
+var summation = function (num) {
+  let arr = [];
+  for (let i = 0; i <= num; i++) {
+    arr.push(i);
   }
-  console.log(litres(2))//, 1, 'should return 1 litre');
-  console.log(litres(1.4))//, 0, 'should return 0 litres');
-  console.log(litres(12.3))//, 6, 'should return 6 litres');
-  console.log(litres(0.82))//, 0, 'should return 0 litres');
-  console.log(litres(11.8))//, 5, 'should return 5 litres');
-  console.log(litres(1787))//, 893, 'should return 893 litres');
-  console.log(litres(0))//, 0, 'should return 0 litres');
+  return arr.reduce((sum, el) => sum + el, 0);
+};
+console.log(summation(8)); //, 36)
 
 
-  let greet=()=>  'hello world!'
-
-
-  //Grasshopper - Summation
-  var summation = function (num) {
-    let arr=[];
-    for (let i=0; i<=num; i++){
-      arr.push(i)
-    }
-   return arr.reduce((sum,el)=> sum+el,0)
+//What is between?
+function between(a, b) {
+  let arr = [];
+  for (let i = a; i <= b; i++) {
+    arr.push(i);
   }
-  console.log(summation(8))//, 36)
+  return arr;
+}
+console.log(between(1, 4));
