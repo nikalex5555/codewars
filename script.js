@@ -678,3 +678,11 @@ console.log(century(1705))
 function numberToString(num) {
   return num+''
 }
+
+//Parse nice int from char problem
+function getAge(inputString){
+  let res= inputString.split('')[0];
+  return +res
+  
+  }
+  console.log(getAge("4 years old"))//, 4);
