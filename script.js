@@ -714,3 +714,9 @@ return l==w?l*w:2*(l+w)
     // i will be an integer. Double it and return it.
     return i*2;
   }
+
+
+  //Function 3 - multiplying two numbers
+  function multiply(a,b){
+    return a*b
+  }
