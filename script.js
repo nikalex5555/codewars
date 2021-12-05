@@ -773,3 +773,10 @@ function find_average(array) {
  return arr
 }
 console.log(find_average([1,1,1]))
+
+
+//Sum The Strings
+function sumStr(a,b) {
+  return (+a+ +b)+''
+}
+console.log(sumStr("4","5"))//, "9"))
