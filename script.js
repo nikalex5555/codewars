@@ -692,3 +692,13 @@ function getAge(inputString){
    return d>=3?d*40-20:d>=7?d*40-50:d*40
 
   }
+
+  
+//Simple multiplication
+
+  function simpleMultiplication(number) {
+if(number%2==0){
+  return number*8
+}
+return number*9
+  }
