@@ -651,7 +651,7 @@ console.log(twiceAsOld(55, 30)); // , 5);
 
 //Get Nth Even Number
 function nthEven(n) {
-  
+
   if (n == 0 || n == 1) {
     return 0;
   }
@@ -662,3 +662,8 @@ console.log(nthEven(2)); //, 2, "Wrong Value!");
 console.log(nthEven(3)); //, 4, "Wrong Value!");
 console.log(nthEven(100)); //, 198, "Wrong Value!");
 console.log(nthEven(1298734)); //, 2597466, "Wrong Value!");
+
+//Third Angle of a Triangle
+function otherAngle(a, b) {
+  return 180-a-b;
+}
