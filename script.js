@@ -524,8 +524,8 @@ function switchItUp(number) {
 
 function position(letter) {
   //let alf = "abcdefghijklmnopqrstuvwxyz";
-  let arr="abcdefghijklmnopqrstuvwxyz".split('').indexOf(letter)+1
-  return "Position of alphabet: "+arr
+  let arr = "abcdefghijklmnopqrstuvwxyz".split("").indexOf(letter) + 1;
+  return "Position of alphabet: " + arr;
 }
 console.log(position("a")); //,"Position of alphabet: 1");
 console.log(position("z")); //,"Position of alphabet: 26");
@@ -538,52 +538,85 @@ let arr =
 console.log(arr); */
 
 function arrayPlusArray(arr1, arr2) {
-let arr=(arr1.concat(arr2)) 
-return arr.reduce((sum,el)=>sum+el,0)
+  let arr = arr1.concat(arr2);
+  return arr.reduce((sum, el) => sum + el, 0);
 }
 //console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
 //Even numbers in an array
 function evenNumbers(array, number) {
-  let marr=[];
-  for(let i=0; i<array.length; i++){
-    if(array[i]%2==0){
+  let marr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
       marr.push(array[i]);
     }
   }
-  return marr.slice(-number)
+  return marr.slice(-number);
 }
-  console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))//, [4, 6, 8]);
-  console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))//, [-8, 26]);
-  console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1))//, [6]);
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)); //, [4, 6, 8]);
+console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2)); //, [-8, 26]);
+console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1)); //, [6]);
 
 //getNames()
-  function getNames(data){
-    return data.map(function(item){return item.name});
-  }
+function getNames(data) {
+  return data.map(function (item) {
+    return item.name;
+  });
+}
 
 //JavaScript Array Filter
-  function getEvenNumbers(numbersArray){
-   return numbersArray.filter(el=>{return el%2==0})
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter((el) => {
+    return el % 2 == 0;
+  });
+}
+console.log(getEvenNumbers([1, 2, 3, 6, 8, 10])); //, [2,6,8,10])
+console.log(getEvenNumbers([1, 2])); //, [2]))
+console.log(getEvenNumbers([12, 14, 15])); //, [12,14])
+console.log(getEvenNumbers([13, 15])); //, [])
+console.log(getEvenNumbers([1, 3, 9])); //, [])
+
+//Reversed Words
+function reverseWords(str) {
+  let arr = str.split(" ");
+  let ret = [];
+  for (let i = 0; i < arr.length; i++) {
+    ret.unshift(arr[i]);
   }
-      console.log(getEvenNumbers([1,2,3,6,8,10]))//, [2,6,8,10])
-      console.log(getEvenNumbers([1,2]))//, [2]))
-      console.log(getEvenNumbers([12,14,15]))//, [12,14])
-      console.log(getEvenNumbers([13,15]))//, [])
-      console.log(getEvenNumbers([1,3,9]))//, [])
+  return ret.join(" ");
+}
+console.log(reverseWords("hello world!")); //, "world! hello")
+console.log(reverseWords("yoda doesn't speak like this")); //,  "this like speak doesn't yoda")
+console.log(reverseWords("foobar")); //,  "foobar")
+console.log(reverseWords("kata editor")); //,  "editor kata")
+console.log(reverseWords("row row row your boat")); //,  "boat your row row row")
 
+//Reversed Strings
+function solution(str) {
+  return str.split("").reverse().join("");
+}
 
-      //Reversed Words
-      function reverseWords(str){
-       let arr= str.split(' ')
-        let ret=[];
-        for(let i=0; i<arr.length; i++){
-          ret.unshift(arr[i])
-        }
-        return ret.join(' ')
-
-      }
-     console.log(reverseWords("hello world!"))//, "world! hello")
-     console.log(reverseWords("yoda doesn't speak like this" ))//,  "this like speak doesn't yoda")
-     console.log(reverseWords("foobar"                       ))//,  "foobar")
-     console.log(reverseWords("kata editor"                  ))//,  "editor kata")
-     console.log(reverseWords("row row row your boat"        ))//,  "boat your row row row")
+function getSum(a, b) {
+  //Good luck!
+  let arr = [];
+  if (a == b) {
+    return a;
+  }
+  if (a > b) {
+    for (let i = b; i <= a; i++) {
+      arr.push(i);
+    }
+    return arr.reduce((sum, el) => {
+      return sum + el;
+    }, 0);
+  }
+  if (a < b) {
+    for (let i = a; i <= b; i++) {
+      arr.push(i);
+    }
+    return arr.reduce((sum, el) => {
+      return sum + el;
+    }, 0);
+  }
+}
+console.log(getSum(0, -1)); //,-1);
+console.log(getSum(221, -313)); //,1);
