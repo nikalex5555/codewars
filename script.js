@@ -799,3 +799,11 @@ console.log(array("1,2,3,4,5")); //, '2 3 4');
 function greet(name){
   return "Hello, "+name+" how are you doing today?"
   }
+
+//Is it even?
+  function testEven(n) {
+    if(n%2==0){
+      return true
+    }
+      return false
+    }
