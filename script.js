@@ -760,3 +760,16 @@ return   n<10?"Keep at it until you get it" :"Great, now move on to tricks" ;
 }
 console.log(hoopCount(3))//,"Keep at it until you get it" ) 
 console.log(hoopCount(11))//,"Great, now move on to tricks"  )
+
+
+
+//Calculate average
+function find_average(array) {
+  if(array.length==0){
+    return 0
+  }
+ let sum= array.reduce((sum,el)=> sum+el,0);
+ let arr=sum/array.length
+ return arr
+}
+console.log(find_average([1,1,1]))
