@@ -743,7 +743,6 @@ var summation = function (num) {
 };
 console.log(summation(8)); //, 36)
 
-
 //What is between?
 function between(a, b) {
   let arr = [];
@@ -755,28 +754,48 @@ function between(a, b) {
 console.log(between(1, 4));
 
 //Keep up the hoop
-function hoopCount (n) {
-return   n<10?"Keep at it until you get it" :"Great, now move on to tricks" ;
+function hoopCount(n) {
+  return n < 10
+    ? "Keep at it until you get it"
+    : "Great, now move on to tricks";
 }
-console.log(hoopCount(3))//,"Keep at it until you get it" ) 
-console.log(hoopCount(11))//,"Great, now move on to tricks"  )
-
-
+console.log(hoopCount(3)); //,"Keep at it until you get it" )
+console.log(hoopCount(11)); //,"Great, now move on to tricks"  )
 
 //Calculate average
 function find_average(array) {
-  if(array.length==0){
-    return 0
+  if (array.length == 0) {
+    return 0;
   }
- let sum= array.reduce((sum,el)=> sum+el,0);
- let arr=sum/array.length
- return arr
+  let sum = array.reduce((sum, el) => sum + el, 0);
+  let arr = sum / array.length;
+  return arr;
 }
-console.log(find_average([1,1,1]))
-
+console.log(find_average([1, 1, 1]));
 
 //Sum The Strings
-function sumStr(a,b) {
-  return (+a+ +b)+''
+function sumStr(a, b) {
+  return +a + +b + "";
 }
-console.log(sumStr("4","5"))//, "9"))
+console.log(sumStr("4", "5")); //, "9"))
+
+function array(arr) {
+  if(arr.length<3){
+    return null
+  }
+  //let newArr=[];
+  let newArr = arr.split(",");
+  newArr.pop();
+  newArr.shift();
+  return String(newArr.join(" "));
+}
+console.log(array("1,2,3")); //, '2');
+console.log(array("1,2,3,4")); //, '2 3');
+console.log(array("1,2,3,4,5")); //, '2 3 4');
+
+
+
+//Returning Strings
+function greet(name){
+  return "Hello, "+name+" how are you doing today?"
+  }
