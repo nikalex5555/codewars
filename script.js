@@ -667,3 +667,8 @@ console.log(nthEven(1298734)); //, 2597466, "Wrong Value!");
 function otherAngle(a, b) {
   return 180-a-b;
 }
+//Century From Year
+function century(n) {
+return Math.ceil(n/100) 
+}
+console.log(century(1705))
