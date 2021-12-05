@@ -418,3 +418,140 @@ console.log(
     "Snow white",
   ])
 ); //,["Barbie doll","Hello Kitty","Hello Kitty"]);
+
+function colorOf(r, g, b) {
+  //coding here
+  let arr = ["#"];
+  if (r.toString(16).split("").length == 2) arr.push(r.toString(16).split(""));
+  else if (r.toString(16).split("").length == 1) {
+    arr.push("0", r.toString(16).split(""));
+  }
+  arr.push(g.toString(16));
+  if (g.toString(16).split("").length == 1) {
+    arr.push("0", g.toString(16));
+  }
+  arr.push(b.toString(16));
+  if (b.toString(16).split("").length == 1) {
+    arr.push("0", b.toString(16));
+  }
+
+  return arr;
+}
+console.log(colorOf(255, 0, 0)); //, "#ff0000");
+//showColor("#ff0000")
+console.log(colorOf(0, 111, 0)); //, "#006f00");
+//showColor("#006f00")
+console.log(colorOf(1, 2, 3)); //, "#010203");
+//showColor("#010203")
+
+//String repeat
+function repeatStr(n, s) {
+  let arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(s);
+  }
+  return arr.join("");
+}
+
+console.log(repeatStr(3, "*")); //, "***");
+console.log(repeatStr(5, "#")); //, "#####");
+console.log(repeatStr(2, "ha ")); //, "ha ha ");
+
+function bmi(weight, height) {
+  let bmi = weight * height * height;
+  if (bmi <= 18.5) {
+    return "Underweight";
+  } else if (bmi <= 25.0) {
+    return "Normal";
+  } else if (bmi <= 30.0) {
+    return "Overweight";
+  } else if (bmi > 30) {
+    return "Obese";
+  }
+}
+console.log(bmi(80, 1.8)); //, "Normal");
+
+function calculator(a, b, sign) {
+  if (sign == "+") {
+    return a + b;
+  }
+  if (sign == "-") {
+    return a - b;
+  }
+  if (sign == "*") {
+    return a * b;
+  }
+  if (sign == "/") {
+    return a / b;
+  }
+  if (typeof a == "string" || typeof b == "string") {
+    return "unknown value";
+  }
+  if (sign !== "+" || sign !== "-" || sign !== "*" || sign !== "/") {
+    return "unknown value";
+  }
+}
+console.log(calculator(1, 2, "+")); //, 3, "calculate");
+console.log(calculator(1, 2, "-")); //, -1, "calculate");
+console.log(calculator(3, 5, "*")); //, 15, "calculate");
+console.log(calculator(6, 2, "/")); //, 3, "calculate");
+console.log(calculator(6, 2, "$")); //, "unknown value", "calculate");
+console.log(calculator(6, "h", "*")); //, "unknown value", "calculate");
+
+function switchItUp(number) {
+  if (number == 0) {
+    return "zero";
+  } else if (number == 1) {
+    return "one";
+  } else if (number == 2) {
+    return "two";
+  } else if (number == 3) {
+    return "three";
+  } else if (number == 4) {
+    return "four";
+  } else if (number == 5) {
+    return "five";
+  } else if (number == 6) {
+    return "six";
+  } else if (number == 7) {
+    return "seven";
+  } else if (number == 8) {
+    return "eight";
+  } else if (number == 9) {
+    return "nine";
+  }
+}
+
+function position(letter) {
+  //let alf = "abcdefghijklmnopqrstuvwxyz";
+  let arr="abcdefghijklmnopqrstuvwxyz".split('').indexOf(letter)+1
+  return "Position of alphabet: "+arr
+}
+console.log(position("a")); //,"Position of alphabet: 1");
+console.log(position("z")); //,"Position of alphabet: 26");
+console.log(position("e")); //,"Position of alphabet: 5");
+
+/* let alf = "abcdefghijklmnopqrstuvwxyz";
+let arr =
+  alf.split("")
+  return  ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"].indexOf(letter)
+console.log(arr); */
+
+function arrayPlusArray(arr1, arr2) {
+let arr=(arr1.concat(arr2)) 
+return arr.reduce((sum,el)=>sum+el,0)
+}
+//console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+//Even numbers in an array
+function evenNumbers(array, number) {
+  let marr=[];
+  for(let i=0; i<array.length; i++){
+    if(array[i]%2==0){
+      marr.push(array[i]);
+    }
+  }
+  return marr.slice(-number)
+}
+  console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))//, [4, 6, 8]);
+  console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))//, [-8, 26]);
+  console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1))//, [6]);
