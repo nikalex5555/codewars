@@ -621,18 +621,28 @@ function getSum(a, b) {
 console.log(getSum(0, -1)); //,-1);
 console.log(getSum(221, -313)); //,1);
 
-
 //Volume of a Cuboid
 class Kata {
   static getVolumeOfCuboid(length, width, height) {
-return length* width* height
+    return length * width * height;
   }
 }
 
 //Is n divisible by x and y?
 function isDivisible(n, x, y) {
-  if(n%x==0&&n%y==0){
-    return true
+  if (n % x == 0 && n % y == 0) {
+    return true;
   }
-  return false
+  return false;
 }
+
+
+//Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  for (let i = 0; i < 100; i++) {
+    if (dadYearsOld + i == (sonYearsOld + i) * 2||dadYearsOld - i == (sonYearsOld - i) * 2) {
+      return i;
+    }
+  }
+}
+console.log(twiceAsOld(55, 30)); // , 5);
