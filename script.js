@@ -693,7 +693,7 @@ function getAge(inputString){
 
   }
 
-  
+
 //Simple multiplication
 
   function simpleMultiplication(number) {
@@ -702,3 +702,8 @@ if(number%2==0){
 }
 return number*9
   }
+
+//Area or Perimeter
+  const areaOrPerimeter = function(l , w) {
+return l==w?l*w:2*(l+w)
+  };
