@@ -707,3 +707,10 @@ return number*9
   const areaOrPerimeter = function(l , w) {
 return l==w?l*w:2*(l+w)
   };
+
+
+//You Can't Code Under Pressure #1
+  function doubleInteger(i) {
+    // i will be an integer. Double it and return it.
+    return i*2;
+  }
