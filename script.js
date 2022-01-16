@@ -179,6 +179,7 @@ function htmlspecialchars(formData) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 }
+
 console.log(htmlspecialchars("<h2>Hello World</h2>")); //,
 ("&lt;h2&gt;Hello World&lt;/h2&gt;");
 
@@ -194,10 +195,12 @@ function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   // code goes here
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
+
 function move(position, roll) {
   // return the new position
   return 2 * roll + position;
 }
+
 function combat(health, damage) {
   return health - damage > 0 ? health - damage : 0;
 }
@@ -206,6 +209,7 @@ function correct(string) {
   // your code here
   return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I");
 }
+
 function peopleWithAgeDrink(old) {
   if (old < 14) {
     return "drink toddy";
@@ -245,6 +249,7 @@ var array1 = [
   true,
   true,
 ];
+
 function countSheeps(arrayOfSheep) {
   let res = 0;
   arrayOfSheep.forEach((el) => {
@@ -252,6 +257,7 @@ function countSheeps(arrayOfSheep) {
   });
   return res;
 }
+
 console.log(countSheeps(array1));
 
 //If you can't sleep, just count sheep!!
@@ -277,6 +283,7 @@ function abbrevName(name) {
   });
   return arr.join(".").toUpperCase();
 }
+
 console.log(abbrevName("Sam Harris")); //, "S.H");
 console.log(abbrevName("Patrick Feenan")); //, "P.F");
 console.log(abbrevName("Evan Cole")); //, "E.C");
@@ -306,6 +313,7 @@ function remainder(a, b) {
     return a % b;
   }
 }
+
 console.log(remainder(17, 5)); //, 2, 'Returned value should be the value left over after dividing as much as possible.');
 console.log(remainder(13, 72)); //, remainder(72, 13), 'The order the arguments are passed should not matter.');
 console.log(remainder(1, 0)); //, 'Divide by zero should return NaN');
@@ -318,6 +326,7 @@ function DNAtoRNA(dna) {
   // create a function which returns an RNA sequence from the given DNA sequence
   return dna.replace(/T/g, "U").replace(/'U'/g, "T");
 }
+
 console.log(DNAtoRNA("TTTT")); //, "UUUU")
 console.log(DNAtoRNA("GCAT")); //, "GCAU")
 console.log(DNAtoRNA("GACCGCCGCC")); //, "GACCGCCGCC")
@@ -354,6 +363,7 @@ function roundIt(n) {
     return Number(Math.round(n));
   }
 }
+
 console.log(roundIt("3.45")); // , 4);
 console.log(roundIt(34.5)); // , 34);
 console.log(roundIt(34.56)); // , 35);
@@ -371,6 +381,7 @@ function pickIt(arr) {
   }
   return [odd, even];
 }
+
 console.log(pickIt([1, 2])); //,[[1],[2]]);
 console.log(pickIt([1, 2, 3])); //,[[1,3],[2]]);
 console.log(pickIt([3, 2, 1])); //,[[3,1],[2]]);
@@ -395,6 +406,7 @@ function grabDoll(dolls) {
   }
   return bag;
 }
+
 console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Snow white"])); //,["Hello Kitty"]);
 console.log(
   grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"])
@@ -437,6 +449,7 @@ function colorOf(r, g, b) {
 
   return arr;
 }
+
 console.log(colorOf(255, 0, 0)); //, "#ff0000");
 //showColor("#ff0000")
 console.log(colorOf(0, 111, 0)); //, "#006f00");
@@ -469,6 +482,7 @@ function bmi(weight, height) {
     return "Obese";
   }
 }
+
 console.log(bmi(80, 1.8)); //, "Normal");
 
 function calculator(a, b, sign) {
@@ -491,6 +505,7 @@ function calculator(a, b, sign) {
     return "unknown value";
   }
 }
+
 console.log(calculator(1, 2, "+")); //, 3, "calculate");
 console.log(calculator(1, 2, "-")); //, -1, "calculate");
 console.log(calculator(3, 5, "*")); //, 15, "calculate");
@@ -527,6 +542,7 @@ function position(letter) {
   let arr = "abcdefghijklmnopqrstuvwxyz".split("").indexOf(letter) + 1;
   return "Position of alphabet: " + arr;
 }
+
 console.log(position("a")); //,"Position of alphabet: 1");
 console.log(position("z")); //,"Position of alphabet: 26");
 console.log(position("e")); //,"Position of alphabet: 5");
@@ -541,6 +557,7 @@ function arrayPlusArray(arr1, arr2) {
   let arr = arr1.concat(arr2);
   return arr.reduce((sum, el) => sum + el, 0);
 }
+
 //console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
 //Even numbers in an array
 function evenNumbers(array, number) {
@@ -552,6 +569,7 @@ function evenNumbers(array, number) {
   }
   return marr.slice(-number);
 }
+
 console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)); //, [4, 6, 8]);
 console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2)); //, [-8, 26]);
 console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1)); //, [6]);
@@ -569,6 +587,7 @@ function getEvenNumbers(numbersArray) {
     return el % 2 == 0;
   });
 }
+
 console.log(getEvenNumbers([1, 2, 3, 6, 8, 10])); //, [2,6,8,10])
 console.log(getEvenNumbers([1, 2])); //, [2]))
 console.log(getEvenNumbers([12, 14, 15])); //, [12,14])
@@ -584,6 +603,7 @@ function reverseWords(str) {
   }
   return ret.join(" ");
 }
+
 console.log(reverseWords("hello world!")); //, "world! hello")
 console.log(reverseWords("yoda doesn't speak like this")); //,  "this like speak doesn't yoda")
 console.log(reverseWords("foobar")); //,  "foobar")
@@ -618,6 +638,7 @@ function getSum(a, b) {
     }, 0);
   }
 }
+
 console.log(getSum(0, -1)); //,-1);
 console.log(getSum(221, -313)); //,1);
 
@@ -647,6 +668,7 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
     }
   }
 }
+
 console.log(twiceAsOld(55, 30)); // , 5);
 
 //Get Nth Even Number
@@ -656,6 +678,7 @@ function nthEven(n) {
   }
   return n * 2 - 2;
 }
+
 console.log(nthEven(1)); //, 0, "Wrong Value!");
 console.log(nthEven(2)); //, 2, "Wrong Value!");
 console.log(nthEven(3)); //, 4, "Wrong Value!");
@@ -666,10 +689,12 @@ console.log(nthEven(1298734)); //, 2597466, "Wrong Value!");
 function otherAngle(a, b) {
   return 180 - a - b;
 }
+
 //Century From Year
 function century(n) {
   return Math.ceil(n / 100);
 }
+
 console.log(century(1705));
 
 //Convert a Number to a String!
@@ -682,6 +707,7 @@ function getAge(inputString) {
   let res = inputString.split("")[0];
   return +res;
 }
+
 console.log(getAge("4 years old")); //, 4);
 
 //Transportation on vacation
@@ -719,10 +745,12 @@ function addFive(num) {
   var total = num + 5;
   return total;
 }
+
 //Keep Hydrated!
 function litres(time) {
   return Math.floor(time * 0.5);
 }
+
 console.log(litres(2)); //, 1, 'should return 1 litre');
 console.log(litres(1.4)); //, 0, 'should return 0 litres');
 console.log(litres(12.3)); //, 6, 'should return 6 litres');
@@ -751,6 +779,7 @@ function between(a, b) {
   }
   return arr;
 }
+
 console.log(between(1, 4));
 
 //Keep up the hoop
@@ -759,6 +788,7 @@ function hoopCount(n) {
     ? "Keep at it until you get it"
     : "Great, now move on to tricks";
 }
+
 console.log(hoopCount(3)); //,"Keep at it until you get it" )
 console.log(hoopCount(11)); //,"Great, now move on to tricks"  )
 
@@ -771,12 +801,14 @@ function find_average(array) {
   let arr = sum / array.length;
   return arr;
 }
+
 console.log(find_average([1, 1, 1]));
 
 //Sum The Strings
 function sumStr(a, b) {
   return +a + +b + "";
 }
+
 console.log(sumStr("4", "5")); //, "9"))
 
 function array(arr) {
@@ -789,6 +821,7 @@ function array(arr) {
   newArr.shift();
   return String(newArr.join(" "));
 }
+
 console.log(array("1,2,3")); //, '2');
 console.log(array("1,2,3,4")); //, '2 3');
 console.log(array("1,2,3,4,5")); //, '2 3 4');
@@ -806,7 +839,6 @@ function testEven(n) {
   return false;
 }
 
-
 //Reversed sequence
 const reverseSeq = (n) => {
   let arr = [];
@@ -815,4 +847,363 @@ const reverseSeq = (n) => {
   }
   return arr.reverse();
 };
-console.log(reverseSeq(5));
+
+//console.log(reverseSeq(5));
+
+function sum(numbers) {
+  // "use strict";
+  //if(numbers===[]){return 0}
+  // return numbers.reduce((sum, el)=>sum+el,0)
+  return numbers === [] ? 0 : numbers.reduce((sum, el) => sum + el, 0);
+}
+console.log(sum([]));
+console.log(sum([1, 5.2, 4, 0, -1]));
+
+function countBy(x, n) {
+  let z = [];
+  for (let i = x; i <= x * n; i++) {
+    if (i % x == 0) z.push(i);
+  }
+  return z;
+}
+
+console.log(countBy(1, 10)); //, [1,2,3,4,5,6,7,8,9,10], "Array does not match")
+console.log(countBy(2, 5)); //, [2,4,6,8,10], "Array does not match")
+
+function basicOp(operation, value1, value2) {
+  return operation === "+"
+    ? value1 + value2
+    : operation === "-"
+    ? value1 - value2
+    : operation === "*"
+    ? value1 * value2
+    : operation === "/"
+    ? value1 / value2
+    : NaN;
+}
+
+console.log(basicOp("+", 4, 7)); //, 11);
+console.log(basicOp("-", 15, 18)); //, -3);
+console.log(basicOp("*", 5, 5)); //, 25);
+console.log(basicOp("/", 49, 7)); //, 7);
+
+function digitize(n) {
+  //code here
+  let c = String(n).split("").reverse();
+  return c.map(Number);
+}
+
+console.log(digitize(35231)); //,[1,3,2,5,3]);
+console.log(digitize(0)); //,[0])//;
+
+const num = 35;
+let nextNum = num;
+nextNum = 44;
+
+/*
+const user={}//№4567
+const nextUser=user
+nextUser.name = 'Bob'
+console.log((user))*/
+
+// const user={};//№4567
+// const nextUser={}//№0007
+// console.log(user===nextUser)//false
+// console.log({}==={})//false
+
+/*const userList=[{
+    name:'Alex'
+}];//№4567
+//const nextUserList=[];//№0007
+const user={
+    name:'Bob'
+};*/
+//userList.push(user)//№4567
+//const nextUserList=[...userList]
+//nextuserList.push(user)
+//const copyUser={...user,age:23, friends:[], name:'Helen'}
+// const user={age:23,
+//     name:'Helen',
+//     friends:['Bob','Alex'],
+// }
+// const copyUser={...user, friends:[...user.friends]}//№333
+// copyUser.friends.push('Donald')
+// console.log(copyUser)
+//console.log(user)
+//_.cloneDeep глубокое копирование
+
+/*const mapUsers=users.map(user=>{
+    if(user.name==='Alex'){
+        return {...user,age:24}
+    }
+    return user
+})*/
+/* const mapUsers=users.map(user=>user.name==='Alex'?{...user,age:24}:user)
+const mapUsers=users.map(user=>({...user}))//если мы хотим получить объект в теле функции то перед скобками ставим круглые скобки
+console.log(mapUsers[1]===users[1])//
+const greeting = users.map(u=>`Hi! i'm ${u.name}. i'm ${u.age} y.o.` )
+console.log(greeting)
+ */
+
+var haystack_1 = [
+  "3",
+  "123124234",
+  undefined,
+  "needle",
+  "world",
+  "hay",
+  2,
+  "3",
+  true,
+  false,
+];
+var haystack_2 = [
+  "283497238987234",
+  "a dog",
+  "a cat",
+  "some random junk",
+  "a piece of hay",
+  "needle",
+  "something somebody lost a while ago",
+];
+var haystack_3 = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  8,
+  7,
+  5,
+  4,
+  3,
+  4,
+  5,
+  6,
+  67,
+  5,
+  5,
+  3,
+  3,
+  4,
+  2,
+  34,
+  234,
+  23,
+  4,
+  234,
+  324,
+  324,
+  "needle",
+  1,
+  2,
+  3,
+  4,
+  5,
+  5,
+  6,
+  5,
+  4,
+  32,
+  3,
+  45,
+  54,
+];
+
+function findNeedle(haystack) {
+  // your code here
+  let res = haystack.indexOf("needle");
+  if (res > 0) {
+    return "found the needle at position " + res;
+  }
+}
+console.log(findNeedle(haystack_1)); //, 'found the needle at position 3')
+console.log(findNeedle(haystack_2)); //, 'found the needle at position 5')
+console.log(findNeedle(haystack_3)); //, 'found the needle at position 30')
+
+function invert(array) {
+  return array.map((el) => -el);
+}
+console.log(invert([1, 2, 3, 4, 5])); //, [-1,-2,-3,-4,-5]);
+console.log(invert([1, -2, 3, -4, 5])); //, [-1,2,-3,4,-5]);
+console.log(invert([])); //, []);
+console.log(invert([0])); //, [-0]);
+
+function past(h, m, s) {
+  /* if(h||m||s===0){
+        
+    } */
+  return (res = h * 3600000 + m * 60000 + s * 1000);
+}
+console.log(past(0, 1, 1)); //,61000)
+console.log(past(1, 1, 1)); //,3661000)
+console.log(past(0, 0, 0)); //,0)
+console.log(past(1, 0, 1)); //,3601000)
+console.log(past(1, 0, 0)); //,3600000)
+
+function countPositivesSumNegatives(input) {
+  let countPositives = 0;
+  let countNegatives = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      //countPositives.push(input[i]);
+      countPositives++;
+    }
+    if (input[i] < 0) {
+      //countNegatives.push(input[i]);
+      countNegatives += input[i];
+    }
+    if (input[i] == 0) {
+    }
+  }
+  return [countPositives, countNegatives];
+}
+console.log(countPositivesSumNegatives([0, 0]));
+function getAverage(marks) {
+  let res = marks.reduce((sum, el) => {
+    return sum + el;
+  }, 0);
+  let resSum = res / marks.length;
+  return Math.floor(resSum);
+}
+console.log(getAverage([2, 2, 2, 2])); //,2);
+console.log(getAverage([1, 2, 3, 4, 5])); //,3);
+console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2])); //,1);
+
+function squareSum(numbers) {
+  return numbers.reduce((sum, el) => sum + Math.pow(el, 2), 0);
+}
+console.log(squareSum([1, 2])); //, 5)
+console.log(squareSum([0, 3, 4, 5])); //, 50)
+console.log(squareSum([])); //, 0)
+
+let students = [
+  {
+    name: "Bob",
+    age: 22,
+    isMarried: true,
+    scores: 85, //+10 баллов
+  },
+  {
+    name: "Alex",
+    age: 21,
+    isMarried: true,
+    scores: 89,
+  },
+  {
+    name: "Nick",
+    age: 20,
+    isMarried: false,
+    scores: 120,
+  },
+  {
+    name: "John",
+    age: 19,
+    isMarried: false,
+    scores: 100,
+  },
+];
+
+/* function getStudentName(item, i) {
+  return `Index: ${i}: ${item.name}.`;
+};
+
+
+
+
+
+const map = (array,callback)=>{
+   const newArray=[]
+   for(let i=0; i<array.length; i++){
+    newArray[i]= callback(array[i],i)
+   }
+   return newArray
+}//обявлять переменную function expresson с const должно обьявляться вначале инициализации
+
+console.log(map(students, getStudentName));
+console.log(students.map(getStudentName));
+
+
+console.log(students.map(s=>s));//поверхностная копия=>([...students])
+console.log(students.map(s=>({...s})))//глубокая копия
+console.log(students.map(s=>{
+ return s.name==='BOB'?{...s, scores:s.scores+10}:s
+  
+})) */
+
+function getStudentName(item, i) {
+  return `Index: ${i}: ${item.name}.`;
+}
+
+const filterIt = (array, callback) => {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      //callback(array[i]) && newArray.push(array[i])
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}; //обявлять переменную function expresson с const должно обьявляться вначале инициализации
+
+console.log(students.filter((s) => s.scores >= 50));
+console.log(filterIt(students, (s) => s.scores >= 150));
+//console.log({}==={})//false
+
+const findIt = (array, callback) => {
+  //const newArray=[]
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      //callback(array[i]) && newArray.push(array[i])
+      return array[i];
+    }
+  }
+};
+console.log(students.find((s) => s.name === "Bob"));
+console.log(findIt(students, (s) => s.name === "Bob"));
+
+let aret = 5;
+let c = 1300 / 2.53;
+console.log(c);
+
+function countSheeps(arrayOfSheep) {
+  let res = arrayOfSheep.map((m) => {
+    if (m === true) {
+      return 1;
+    } else return 0;
+  });
+  let run = res.reduce((sum, r) => {
+    return sum + r;
+  }, 0);
+  console.log(run);
+}
+countSheeps([
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+]);
